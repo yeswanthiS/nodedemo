@@ -7,6 +7,9 @@ const PORT = process.env.PORT || 3000;
 //Middlewares
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
+app.get("/",(req, res)=>{
+    res.end("Hello World")
+})
 
 // TODO ENDPOINTS
 app.post('/create', async (req, res) => {
